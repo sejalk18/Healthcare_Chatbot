@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" >
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'chatbot_bot/css/style.css' %}">
+    <script type="text/javascript" src="{% static 'chatbot_bot/js/main.js' %}"></script>
+    <title>CHATBOT | Home</title>
+    <link rel="icon" href="{% static 'chatbot_bot/favicon.ico' %}">
+</head>
+<body>
+    <header>
+        
+        <div class="navbar">
+            <div class="logo"><a href="/">HEALTHCARE CHATBOT</a> </div>
+
+            <a href="page" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        
+        <main>
+            <section id="hero" style="width: 600px;">
+                <h1>Welcome</h1>
+                <br>
+                <p>
+                    <h2><b>Healthcare Chatbot</h2></b>
+                </p>
+                <br>
+                <p><b>
+                    Hello! I'm a healthcare chatbot here to assist you with any questions or concerns you may have regarding your health.
+                    <br>I can help you find resources, answer questions, and guide you towards the appropriate medical care if necessary. 
+                    <br>However, it's important to note that I'm not a substitute for professional medical advice, diagnosis, or treatment.  
+                    <br>If you have any urgent or specific medical concerns, please seek advice from a healthcare provider.
+                    <br>I'll do my best to assist you
+                </b></p>
+            </section>
+        </main>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+        </script>
+    </header>
+</body>
+</html>
